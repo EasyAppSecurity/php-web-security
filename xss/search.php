@@ -8,7 +8,10 @@
 	<?php
 	//?q=<script>alert(1)</script> -> return output scripting
 	//?q=<script>alert(1)</sc"%2B"ript> -> success
-	//
+	//to prevent:
+	//if (isset($_GET['q']) && is_string($_GET['q'])) {
+ 	// printf('output = "%s";', htmlspecialchars($_GET['q']));
+	//}
 	if (isset($_GET['q'])) {
  	  printf('output = "%s";', $_GET['q']);
 	}
